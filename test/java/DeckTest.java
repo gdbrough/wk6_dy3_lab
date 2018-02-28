@@ -29,7 +29,14 @@ public class DeckTest {
 
     @Test
     public void populateArrayWithFullDeck(){
-        deck.populateArrayWithFullDeck(card);
+        deck.populateArrayWithFullDeck();
         assertEquals(52, deck.getNumberOfCardsInDeck());
+    }
+
+    @Test
+    public void dealCard(){
+        deck.populateArrayWithFullDeck();
+//        deck.deal();
+        assertEquals(0,deck.deal());
     }
 }

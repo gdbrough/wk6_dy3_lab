@@ -2,7 +2,10 @@ import java.util.ArrayList;
 
 public class Deck {
 
+//    Card card;
+
     private ArrayList<Card> deckOfCards;
+//    Card card = new Card();
 
     public Deck(){
         this.deckOfCards = new ArrayList<>();
@@ -18,21 +21,20 @@ public class Deck {
 
     public void populateArrayWithFullDeck(){
         SuitType suits[] = SuitType.values();
+        CardType cards[] = CardType.values();
         for (SuitType suit : suits) {
-//            System.out.println(suit + " at index " + suit.ordinal());
-//        }
-
-            CardType cards[] = CardType.values();
             for (CardType cardName : cards) {
-                System.out.println(cardName + " of " + suit);
-//            }
-//        SuitType[] suits = SuitType.;
-//        System.out.println(suits);
                 Card card = new Card(suit, cardName);
-                addCardToArray(Card card);
-//        for (suit in )
+                addCardToArray(card);
             }
         }
+    }
+
+    public Card deal(){
+        Card card = this.deckOfCards.get(44);
+//        return card;
+//        System.out.println(Card card.get(44));
+        return card.getSuit();
     }
 
 
