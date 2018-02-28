@@ -19,4 +19,12 @@ public class Hand {
         this.handOfCards.add(card);
     }
 
+//    public int getHandTotal(){
+//        CardType cards[] = this.handOfCards.;
+//        for (CardType cardName : cards) {
+//                Card card = new Card(suit, cardName);
+//                addCardToArray(card);
+//        }
+//    }
+
 }

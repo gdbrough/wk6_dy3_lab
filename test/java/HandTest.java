@@ -25,4 +25,9 @@ public class HandTest {
         assertEquals(1, hand.getNumberOfCardsInHand());
     }
 
+//    @Test
+//    public void countTotalValueOfCards(){
+//        assertEquals(6, hand.getHandTotal());
+//    }
+
 }

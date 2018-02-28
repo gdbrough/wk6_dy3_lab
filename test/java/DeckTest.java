@@ -35,6 +35,7 @@ public class DeckTest {
         assertEquals(52, deck.getNumberOfCardsInDeck());
     }
 
+//    test no longer valid as unable to test dealing random cards.
 //    @Test
 //    public void dealCard(){
 //        deck.populateArrayWithFullDeck();
@@ -48,8 +49,7 @@ public class DeckTest {
     @Test
     public void dealCardAndremoveDealtCardFromArray(){
         deck.populateArrayWithFullDeck();
-        deck.deal(44);
+        deck.deal(52);
         assertEquals(51,deck.getNumberOfCardsInDeck());
-//        assertEquals(1, hand.getNumberOfCardsInHand());
     }
 }

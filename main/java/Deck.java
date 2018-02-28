@@ -47,8 +47,9 @@ public class Deck {
             cardNumber = rand.nextInt(52);
         }
         Card card = this.deckOfCards.get(cardNumber);
-        hand.addCardToHand(card);
+        Hand hand = new Hand();
         removeCardFromArray(cardNumber);
+        hand.addCardToHand(card);
         String result = card.getCardValue().toString() + " of " + card.getSuit().toString();
 //        return result;
     }
