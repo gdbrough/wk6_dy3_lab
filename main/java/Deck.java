@@ -4,6 +4,7 @@ import java.util.Random;
 public class Deck {
 
 //    Card card;
+    Hand hand;
 
     private ArrayList<Card> deckOfCards;
 //    Card card = new Card();
@@ -39,17 +40,17 @@ public class Deck {
         return new ArrayList<>(this.deckOfCards);
     }
 
-    public String deal(int cardNumber){
+//    public String deal(int cardNumber){
+    public void deal(int cardNumber){
         if (cardNumber > 51) {
             Random rand = new Random();
             cardNumber = rand.nextInt(52);
         }
         Card card = this.deckOfCards.get(cardNumber);
-//        return card;
-//        System.out.println(Card card.get(44));
+        hand.addCardToHand(card);
         removeCardFromArray(cardNumber);
-        String result = card.getCardValue().toString() + " of "+ card.getSuit().toString();
-        return result;
+        String result = card.getCardValue().toString() + " of " + card.getSuit().toString();
+//        return result;
     }
 
 

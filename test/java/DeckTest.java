@@ -10,6 +10,7 @@ public class DeckTest {
 
     Deck deck;
     Card card;
+    Hand hand;
 //    private ArrayList<Deck> deckOfCards;
 
     @Before
@@ -34,20 +35,21 @@ public class DeckTest {
         assertEquals(52, deck.getNumberOfCardsInDeck());
     }
 
-    @Test
-    public void dealCard(){
-        deck.populateArrayWithFullDeck();
-//        ArrayList<String> allCards = deck.getDeckOfCards();
-//        String randomCard = deck.deal();
-//        assertTrue(allCards.contains(randomCard));
-//        deck.deal();
-        assertEquals("SIX of SPADES",deck.deal(44));
-    }
+//    @Test
+//    public void dealCard(){
+//        deck.populateArrayWithFullDeck();
+////        ArrayList<String> allCards = deck.getDeckOfCards();
+////        String randomCard = deck.deal();
+////        assertTrue(allCards.contains(randomCard));
+////        deck.deal();
+//        assertEquals("SIX of SPADES",deck.deal(44));
+//    }
 
     @Test
-    public void removeDealtCardFromArray(){
+    public void dealCardAndremoveDealtCardFromArray(){
         deck.populateArrayWithFullDeck();
-        deck.removeCardFromArray(44);
+        deck.deal(44);
         assertEquals(51,deck.getNumberOfCardsInDeck());
+//        assertEquals(1, hand.getNumberOfCardsInHand());
     }
 }
