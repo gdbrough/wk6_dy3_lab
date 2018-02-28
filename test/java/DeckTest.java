@@ -4,6 +4,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class DeckTest {
 
@@ -36,7 +37,17 @@ public class DeckTest {
     @Test
     public void dealCard(){
         deck.populateArrayWithFullDeck();
+//        ArrayList<String> allCards = deck.getDeckOfCards();
+//        String randomCard = deck.deal();
+//        assertTrue(allCards.contains(randomCard));
 //        deck.deal();
-        assertEquals(0,deck.deal());
+        assertEquals("SIX of SPADES",deck.deal(44));
+    }
+
+    @Test
+    public void removeDealtCardFromArray(){
+        deck.populateArrayWithFullDeck();
+        deck.removeCardFromArray(44);
+        assertEquals(51,deck.getNumberOfCardsInDeck());
     }
 }

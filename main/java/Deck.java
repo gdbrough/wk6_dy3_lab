@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Deck {
 
@@ -30,11 +31,25 @@ public class Deck {
         }
     }
 
-    public Card deal(){
-        Card card = this.deckOfCards.get(44);
+    public void removeCardFromArray(int index){
+        this.deckOfCards.remove(index);
+    }
+
+    public ArrayList<Card> getDeckOfCards() {
+        return new ArrayList<>(this.deckOfCards);
+    }
+
+    public String deal(int cardNumber){
+        if (cardNumber > 51) {
+            Random rand = new Random();
+            cardNumber = rand.nextInt(52);
+        }
+        Card card = this.deckOfCards.get(cardNumber);
 //        return card;
 //        System.out.println(Card card.get(44));
-        return card.getSuit();
+        removeCardFromArray(cardNumber);
+        String result = card.getCardValue().toString() + " of "+ card.getSuit().toString();
+        return result;
     }
 
 
